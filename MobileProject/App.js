@@ -7,12 +7,15 @@ import SettingsScreen from "./SettingsScreen"
 
 const Tab = createBottomTabNavigator();
 
-
-
 export default function App() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: 'tomato',
+        tabBarInactiveTintColor: 'gray'
+      }}
+      >
         <Tab.Screen name="home" component={HomeScreen}/>
         <Tab.Screen name="settings" component={SettingsScreen}/>
 
