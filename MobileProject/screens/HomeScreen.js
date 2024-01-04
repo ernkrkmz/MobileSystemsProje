@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
-const SettingsScreen = () => {
+//import axios from 'axios';
+
+
+const HomeScreen = () => {
     return (
         <View>
-            <Text style={styles.forTest}>
-                This is the settings page
+            <Text style={styles.forTest} >
+                This is the home page
+                
             </Text>
         </View>
-         
     );
 };
+
+
+
 const styles = StyleSheet.create({
     container: {
       flex: 1,
@@ -26,4 +32,5 @@ const styles = StyleSheet.create({
       fontSize: 30,
     }
   });
-export default SettingsScreen;
+
+export default HomeScreen;

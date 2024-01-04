@@ -1,0 +1,40 @@
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import SearchScreen from "../screens/SearchScreen";
+import HomeScreen from "../screens/HomeScreen";
+import { Entypo } from '@expo/vector-icons'; 
+import { Ionicons } from '@expo/vector-icons';
+
+const Tab = createBottomTabNavigator();
+
+export default function appNavigation() {
+    return (
+        <NavigationContainer>
+      <Tab.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: 'black',
+        tabBarInactiveTintColor: 'gray',
+        tabBarActiveBackgroundColor: 'lightgrey'
+
+      }}
+      >
+
+        <Tab.Screen name="Home" component={HomeScreen} options={{
+          tabBarLabel: 'Home',
+
+          tabBarIcon: () => (
+            <Entypo name="home" color={'orange'} size={30} />
+          ),
+        }}/>
+        <Tab.Screen name="Search" component={SearchScreen} options={{
+          tabBarLabel: 'Search',
+
+          tabBarIcon: () => (
+            <Ionicons name="settings" size={30} color="black" />
+          ),
+        }} />
+
+      </Tab.Navigator>
+    </NavigationContainer>
+      );
+}

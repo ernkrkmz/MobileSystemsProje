@@ -1,20 +1,15 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 
 //import axios from 'axios';
 
 
-
-const test = () => {
-    
-}
-
-const HomeScreen = () => {
+const SearchScreen = () => {
     return (
         <View>
             <Text style={styles.forTest} >
-                This is the home page
-                {test()}
+                This is the search page
+                
             </Text>
         </View>
     );
@@ -38,4 +33,4 @@ const styles = StyleSheet.create({
     }
   });
 
-export default HomeScreen;
+export default SearchScreen;
