@@ -2,8 +2,10 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import SearchScreen from "../screens/SearchScreen";
 import HomeScreen from "../screens/HomeScreen";
+import MovieScreen from '../screens/MovieScreen'
 import { Entypo } from '@expo/vector-icons'; 
 import { Ionicons } from '@expo/vector-icons';
+
 
 const Tab = createBottomTabNavigator();
 
@@ -23,16 +25,24 @@ export default function appNavigation() {
           tabBarLabel: 'Home',
 
           tabBarIcon: () => (
-            <Entypo name="home" color={'orange'} size={30} />
+            <Entypo name="home" color={'black'} size={30} />
           ),
         }}/>
         <Tab.Screen name="Search" component={SearchScreen} options={{
           tabBarLabel: 'Search',
 
           tabBarIcon: () => (
-            <Ionicons name="settings" size={30} color="black" />
+            <Ionicons name="md-search-sharp" size={30} color="black" />
           ),
         }} />
+
+        <Tab.Screen name="deneme" component={MovieScreen} options={{
+          tabBarLabel: 'deneme',
+
+          tabBarIcon: () => (
+            <Ionicons name="md-search-sharp" size={30} color="black" />
+          ),
+        }} /> 
 
       </Tab.Navigator>
     </NavigationContainer>
